@@ -91,8 +91,22 @@ sns.boxplot(x=df['day'],y=df['total_bill'],hue=df['sex'])
 ```
 sns.boxplot(x="day", y="total_bill", hue="smoker", data=df, linewidth=2, width=0.6,boxprops={'facecolor': 'pink', "edgecolor": 'darkgreen'},
           whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
+
 ```
+
 ![image](https://github.com/user-attachments/assets/f45fe22f-81c5-4aa8-b6d4-4860f76346e2)
+
+df=sns.load_dataset("tips")
+
+import seaborn as sns
+
+import matplotlib.pyplot as plt
+sns.violinplot(x="day", y="total_bill", hue="smoker", data=df, linewidth=2, width=0.6, palette="Set3", inner="quartile")
+plt.xlabel("Day of the Week")
+plt.ylabel("Total Bill")
+plt.title("Violin Plot of Total Bill by Day and Smoker Status")
+
+
 
 # Result:
  Include your result here
